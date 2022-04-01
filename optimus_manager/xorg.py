@@ -164,6 +164,7 @@ def _generate_nvidia(config, bus_ids, xorg_extra):
     text += "Section \"Screen\"\n" \
             "\tIdentifier \"nvidia\"\n" \
             "\tDevice \"nvidia\"\n" \
+            "\tOption \"MetaModes\" \"nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}\"\n" \
             "\tOption \"AllowEmptyInitialConfiguration\"\n"
 
     if config["nvidia"]["allow_external_gpus"] == "yes":
